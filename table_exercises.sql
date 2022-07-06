@@ -9,7 +9,8 @@ use employees;
 show tables;
 
 -- Explore the employees table. What different data types are present on this table?
-describe employees;
+describe employees
+;
 
 -- Which table(s) do you think contain a numeric type column? (Write this question and your answer in a comment)
 
