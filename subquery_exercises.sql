@@ -98,5 +98,14 @@ and to_date = '9999-01-01'
 
 -- BONUS
 -- Find all the department names that currently have female managers.
+select * 
+from employees
+	join dept_manager
+		using (emp_no)
+where gender = 'F'
+and to_date = '9999-01-01'
+
+
 -- Find the first and last name of the employee with the highest salary.
 -- Find the department name that the employee with the highest salary works in.
+

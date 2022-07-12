@@ -337,14 +337,17 @@ group by dept_name, manager
 
 
 -- Bonus Who is the highest paid employee within each department.
-select dept_name, max(s.salary) as max_salary
-from employees
+select 
+	d.dept_name
+    , max(s.salary) as max_salary
+from employees e 
 	join dept_emp de 
 		using (emp_no)
 	join departments d 
 		using (dept_no)
 	join salaries s
 		using (emp_no)
+	join salaries
 where de.to_date = '9999-01-01'
 	and s.to_date = '9999-01-01'
 group by dept_name
